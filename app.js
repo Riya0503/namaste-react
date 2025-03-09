@@ -1,6 +1,6 @@
 // const heading = React.createElement('h1', {id: "heading"}, "Hello World From React!!");
 // let root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(heading)
+// root.render(heading);
 
 const parent = React.createElement('div', {id : 'parent'}, 
     [
