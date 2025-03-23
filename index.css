@@ -49,16 +49,20 @@ body{
     justify-content: center;
 }
 
+.filters{
+    display: flex;
+}
+
 .searchBar,
 .searchBarBtn{
-    height: 40px;
+    /* height: 40px; */
     margin: 10;
     padding: 0 10px
 }
 
-.searchBar{
+/* .searchBar{
     width: 200px;
-}
+} */
 
 .filterCont{
     margin: 10px 40px;
@@ -92,6 +96,7 @@ body{
 
 .resCard > img{
     width: 100%;
+    height: 200;
 }
 
 .resCardCont:hover{
@@ -106,4 +111,18 @@ body{
     align-items: center;
     border-top: 1px solid;
     padding:  0 20px;
+}
+
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.shimer-card{
+    height: 450px;
+    width: 250px;
+    margin: 20 0;
+    background-color: #f0f0f0
+   
 }
