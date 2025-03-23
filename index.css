@@ -1,3 +1,109 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
 #heading {
     color: red;
+}
+.header{
+    display: flex;
+    justify-content: space-between; 
+    border-bottom: 1px solid;
+}
+
+.logoCont{
+    height: 100px
+}
+
+.logoCont img{
+    height: 100%
+}
+
+.navItems > ul{
+    height: 100%;
+    margin: 0 40px 0 0;
+    display: flex;
+    list-style-type: none;
+    align-content: center;
+    flex-wrap: wrap;
+
+}
+
+.navItems > ul > li{
+    padding: 0 10px;
+    margin: 0 10px
+}
+
+.navItems > ul > li > a{
+    text-decoration: none;
+    color: black
+}
+
+.navItems > ul > li > a:hover{
+    color: rgb(137, 92, 92)
+}
+
+.searchCont{
+    display: flex;
+    justify-content: center;
+}
+
+.searchBar,
+.searchBarBtn{
+    height: 40px;
+    margin: 10;
+    padding: 0 10px
+}
+
+.searchBar{
+    width: 200px;
+}
+
+.filterCont{
+    margin: 10px 40px;
+}
+
+.resCardParentCont{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.resCardCont{
+    /* height: 450px; */
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    margin: 20 0;
+    background-color: #f0f0f0
+}
+
+
+
+.resCardContentCont{
+    padding: 10;
+}
+
+.resCardContentCont > div,
+.resCardContentCont > button{
+    margin: 4 0;
+}
+
+.resCard > img{
+    width: 100%;
+}
+
+.resCardCont:hover{
+    /* width: 98%;
+    height: 98%; */
+    border: 1px solid;
+}
+
+.footerCont{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid;
+    padding:  0 20px;
 }
