@@ -8,8 +8,8 @@ const Login = () => {
     return (
         <div className=''>
             <Header/>
-            <div className='absolute'>
-                <img className='w-[100%] h-[100%]' src={BACKGROUND_IMG} alt="background-img"/>
+            <div className='absolute h-[100%]'>
+                <img className=' h-[100%]' src={BACKGROUND_IMG} alt="background-img"/>
             </div>
             <LoginForm/>
         </div>
