@@ -95,6 +95,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - implement sign in user api
 - setup redux store with user slice
 - update store once sign in/up
+- implemented sign out 
+- update profile firebase api call
+- unsubscribed to onAuthChanged callback
+- Add hardcoded value to constant files
+- Register TMDB and create an app & get access token
+- get data from TMDB now playing movies list api
+
+
+# Bug Fix
+- sign up user displayname
+- if user not logged in re-direct to browse to login page and vice versa
 
 
 
