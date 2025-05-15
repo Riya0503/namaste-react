@@ -101,6 +101,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Add hardcoded value to constant files
 - Register TMDB and create an app & get access token
 - get data from TMDB now playing movies list api
+- custom hooks for nowplayingmovies
+- create movie slice
+- update store with movie data 
+- planning for main and secondary container
+- fetch data for trailer video
+- update store with trailer video data
+- embedded the youtube video & make it autoplay and mute
+- added tailwind class to make main container look good
+- 
 
 
 # Bug Fix
