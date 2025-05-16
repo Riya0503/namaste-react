@@ -6,7 +6,11 @@ import useNowPlayingMovies from '../hooks/useNowPlayingMovies'
 import usePopularPlayingMovies from '../hooks/usePopularPlayingMovies'
 import useTrendingMovies from '../hooks/useTrendingMovies';
 import useUpcomingMovies from '../hooks/useUpcomingMovies';
+import MovieGPTSearch from './MovieGPTSearchPage';
+import { useSelector } from 'react-redux';
+
 const Browse = () => {
+  const gptSearch = useSelector((store) => store.gptSearch.showGPTSearch);
 
   useNowPlayingMovies();
   usePopularPlayingMovies();
@@ -24,8 +28,15 @@ const Browse = () => {
             - list of movies * n
               - movie cards * n
        */}
-       <MainMovieContianer/>
-       <SecondaryMovieContainer/>
+        {
+        gptSearch ? (
+          <MovieGPTSearch/>
+          ) : (
+          <>
+            <MainMovieContianer/>
+            <SecondaryMovieContainer/>
+          </>
+        )}
     </div>
   )
 }

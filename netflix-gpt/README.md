@@ -109,7 +109,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - update store with trailer video data
 - embedded the youtube video & make it autoplay and mute
 - added tailwind class to make main container look good
-- 
+- secondary contaniner with movie list
+- build movie card
+- found tmdb image cdn
+- make UI look more like netlfix with tailwind css
+- fetch and displayed popular, trending, upcoming by creating hooks for each 
+- GPT search Suggestion Page and bar
+- (*) add multi language feature in our app
+ 
+
+
 
 
 # Bug Fix
