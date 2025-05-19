@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux'
 const SecondaryMovieContainer = () => {
   const movieList = useSelector((store) => store.movies)
   return (
-    <div className='relative -mt-20'>
+    <div className='relative mt-0 md:-mt-20'>
       <SecondaryMovieList title={"Now Playing Movies"} movieList={movieList.nowPlayingMovies}/>
       <SecondaryMovieList title={"Popular Movies"} movieList={movieList.popularMovies}/>
       <SecondaryMovieList title={"Upcoming Movies"} movieList={movieList.upcomingMovies}/>

@@ -116,7 +116,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - fetch and displayed popular, trending, upcoming by creating hooks for each 
 - GPT search Suggestion Page and bar
 - (*) add multi language feature in our app
- 
+- mocked open ai gpt search
+- memoization for all fetch calls
+- fetched gpt movie (movie) suggestion from tmdb 
+- created gpt slice and added data
+- reused movie list component to make movie recc. container
+- for keeping secret keys you need to create .env file. and add the .env file to gitignore so it is not pushed to the git
+- made site responsive
+
 
 
 

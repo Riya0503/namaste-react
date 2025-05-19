@@ -4,7 +4,7 @@ import SecondaryMovieCard from './SecondaryMovieCard'
 const SecondaryMovieList = ({title, movieList}) => {
     // console.log(movieList)
   return (
-    <div className='pl-6'>
+    <div className='px-4'>
         <h1 className='text-xl text-white p-2'>{title}</h1>
         <div className='flex overflow-x-scroll'>
             <div className='flex'>

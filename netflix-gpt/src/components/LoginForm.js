@@ -91,7 +91,7 @@ const LoginForm = () => {
     }
 
     return (
-        <div className='absolute w-[50%] h-[50%] translate-x-[50%] translate-y-[50%] '>
+        <div className='absolute w-full md:w-[50%] md:h-[50%] md:translate-x-[50%] translate-y-[50%] '>
             <form onSubmit={(e) => e.preventDefault()} className='flex  flex-col bg-black/80 z-10 p-16'>
                 <label className='text-3xl text-white pb-6'>{signInForm ? SIGN_IN : SIGN_UP}</label>
                 {

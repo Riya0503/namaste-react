@@ -5,7 +5,7 @@ import { auth } from '../utils/firebase';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addUser, removeUser } from '../utils/userSlice';
-import { toggleGPTSearch } from '../utils/gptSearchSlice';
+import { toggleGPTSearch, clearGPTMovieResult } from '../utils/gptSearchSlice';
 import {setLanguage} from '../utils/configSlice';
 
 const Header = () => {
@@ -51,20 +51,24 @@ const Header = () => {
     return () => unsubscribe();
   }, [])
 
+
+  useEffect(() => {
+    return () => gptSearch && dispatch(clearGPTMovieResult())
+  })
   return (
-    <div className='absolute bg-gradient-to-b from-black z-10 w-full flex justify-between'>
-        <img className='w-44 px-8 py-2' src={LOGO_IMG} alt="logo"/>
+    <div className='fixed bg-gradient-to-b from-black z-10 w-screen bg-black/70 flex flex-col items-center md:justify-between md:flex-row '>
+        <img className='w-48 md:w-44 px-8 py-2' src={LOGO_IMG} alt="logo"/>
         {user && <div className='flex items-center'>
-          <img className=' h-[38px] mx-2 my-6' src={DEFAULT_USER_ICON} alt="DEFAULT USER ICON"/>
-          <button className='text-white bg-gray-700  mx-2 my-6 p-2 rounded-sm' onClick={handleGPTSearchClick}>{gptSearch ? "Home" : "GPT Movie Search"}</button>
-          <button className=' mx-2 my-6 p-2 bg-gray-700 text-white rounded-sm' onClick={handleSignOut}>{SIGN_OUT}</button>
-          {gptSearch && <select className=' mx-2 my-6 p-[9px] bg-gray-700 text-white rounded-sm' onChange={(e) => handleLanguage(e)}>
+          <img className=' h-[38px] mx-2 my-2 md:my-6' src={DEFAULT_USER_ICON} alt="DEFAULT USER ICON"/>
+          <button className='text-white bg-gray-700  mx-2 my-2 md:my-6 p-2 rounded-sm' onClick={handleGPTSearchClick}>{gptSearch ? "Home" : "GPT Search"}</button>
+          {gptSearch && <select className=' mx-2 my-2 md:my-6 p-[9px] bg-gray-700 text-white rounded-sm' onChange={(e) => handleLanguage(e)}>
             {
               SUPPORTED_LANG.map(lang => {
                 return <option key={lang.identifier} value={lang.identifier}>{lang.name}</option>;
               })
             }
           </select>}
+          <button className=' mx-2 my-2 md:my-6 p-2 bg-gray-700 text-white rounded-sm' onClick={handleSignOut}>{SIGN_OUT}</button>
         </div>}
     </div>
   )
